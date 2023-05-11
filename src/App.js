@@ -1,10 +1,18 @@
+import Header from "./Header";
 import './App.css';
+import NavBar from "./NavBar";
+import MainContainer from "./MainContainer";
+import Footer from "./Footer";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Test</h1>
-    </div>
+    <>
+      <Header/>
+      <NavBar/>
+      <MainContainer/>
+      <Footer/>
+
+    </>
   );
 }
 
