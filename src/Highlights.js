@@ -7,6 +7,7 @@ function Highlights () {
     return(
         <div className="ContainerHighlights">
             <h1>This weeks specials</h1>
+            <button className="OnlineMenu">Online Menu</button>
             <spam className="GreekSalad">
                 <img src={GreekSaladImg} alt="a salad with tomatoes" className="CardImage" />
                 <h4>Greek Salad</h4>
@@ -19,16 +20,16 @@ function Highlights () {
             <spam className="Bruchetta">
                 <img src={BruchettaImg} alt="a bruchetta" className="CardImage" />
                 <h4>Bruschetta</h4>
-                <p className="Price">$12,99</p>
+                <p className="Price">$5,99</p>
                 <p className="Description">
                     Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.
                 </p>
                 <a>Order a Delivery</a>
             </spam>
             <spam className="LemonDesert">
-                <img src={LemonDessert} alt="lemon desert" className='CardImag'/>
+                <img src={LemonDessert} alt="lemon desert" className='CardImage'/>
                 <h4>LemonDesert</h4>
-                <p className="Price">$12,99</p>
+                <p className="Price">$5,00</p>
                 <p className="Description">
                     This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined.
                 </p>

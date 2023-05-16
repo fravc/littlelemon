@@ -91,3 +91,49 @@
   height: 60px;
   font-weight: bold;
 }
+
+/**********HIGHLIGHTS***********/
+
+.ContainerHighlights{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-gap: 20px;
+  align-items: center;
+  margin: 5% 15%;
+  font-family: 'Karla';
+}
+
+.ContainerHighlights h1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.OnlineMenu{
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.GreekSalad{
+  grid-column: 1;
+  grid-row: 2;
+  justify-content: center;
+  background-color: #EDEFEE;
+}
+
+.Bruchetta{
+  grid-column: 2;
+  grid-row: 2;
+  background-color: #EDEFEE;
+}
+
+.LemonDesert{
+  grid-column: 3;
+  grid-row: 2;
+  background-color: #EDEFEE;
+}
+
+.CardImage{
+  width: 50%;
+  height: 50%;
+}
