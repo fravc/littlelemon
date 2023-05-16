@@ -1,17 +1,18 @@
 import Header from "./Header";
 import './App.css';
 import NavBar from "./NavBar";
-import MainContainer from "./MainContainer";
+import HeroSection from "./HeroSection";
 import Footer from "./Footer";
+import Highlights from "./Highlights";
 
 function App() {
   return (
     <>
       <Header/>
       <NavBar/>
-      <MainContainer/>
+      <HeroSection/>
+      <Highlights/>
       <Footer/>
-
     </>
   );
 }
