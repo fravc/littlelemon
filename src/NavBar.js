@@ -25,7 +25,9 @@ function NavBar() {
           <a href="/login">Login</a>
         </li>
       </ul>
+
     </nav>
+
   );
 }
 
