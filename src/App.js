@@ -1,7 +1,7 @@
-import { BrowserRouter as Router, Route, Routes, Outlet } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import './App.css';
-import BookingComponent from './BookingPage';
+import BookingForm from './BookingPage';
 import Home from './Home'
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/reservations" element={<BookingComponent />} />
+        <Route path="/reservations" element={<BookingForm />} />
 
       </Routes>
 
