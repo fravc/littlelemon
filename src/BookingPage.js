@@ -1,6 +1,6 @@
 import React, { useState, useReducer } from 'react';
 
-const bookingTimesReducer = (state, action) => {
+export const bookingTimesReducer = (state, action) => {
   switch (action.type) {
     case 'UPDATE_TIMES':
       // Update available times based on selected date (action.payload)
@@ -39,6 +39,7 @@ const BookingForm = ({ availableTimes, updateTimes }) => {
 
   return (
     <form style={{ display: 'grid', maxWidth: '200px', gap: '20px' }}>
+      <h3>Book Now</h3>
       <label htmlFor="res-date">Choose date</label>
       <input type="date" id="res-date" value={date} onChange={handleDateChange} />
       <label htmlFor="res-time">Choose time</label>
