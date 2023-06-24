@@ -1,11 +1,12 @@
-import React, { useState, useReducer } from 'react';
+import React, { useReducer } from 'react';
+import BookingForm from './BookingForm';
 
 export const bookingTimesReducer = (state, action) => {
   switch (action.type) {
     case 'UPDATE_TIMES':
       // Update available times based on selected date (action.payload)
-      // For now, return the same available times regardless of the date
-      return ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'];
+      let results = window.fetchAPI(new Date(action.payload));
+      return results;
     default:
       return state;
   }
@@ -19,44 +20,43 @@ const Main = () => {
     dispatchAvailableTimes({ type: 'UPDATE_TIMES', payload: date });
   };
 
+  const submitForm = (form) =>
+  {
+    let errors = validateForm(form);
+
+    if (errors.length > 0) {
+      console.log(errors)
+      alert("Errors");
+      return
+    }
+
+    let success = window.submitAPI(form);
+    if(success)
+      alert("Reseva confirmada !");
+    else
+      alert ("Erro ao finalizar rezerva");
+  }
+
+  const validateForm = (form) =>
+  {
+    let errors = [];
+    if (form.bookingDate === '') {
+    	errors.push("You must inform the booking date!");
+    }
+    if (form.bookingTime === ''){
+      errors.push("You must inform the booking time!");
+    }
+    if (form.numberGuests <= 0){
+      errors.push("You must inform at least 1 guest!");
+    }
+
+    return errors;
+  }
+
   return (
     <div>
-      {/* Other content */}
-      <BookingForm availableTimes={availableTimes} updateTimes={updateTimes} />
-      {/* Other content */}
+      <BookingForm availableTimes={availableTimes} updateTimes={updateTimes} onSubmitForm={submitForm} />
     </div>
-  );
-};
-
-const BookingForm = ({ availableTimes, updateTimes }) => {
-  const [date, setDate] = useState('');
-
-  const handleDateChange = (e) => {
-    const selectedDate = e.target.value;
-    setDate(selectedDate);
-    updateTimes(selectedDate);
-  };
-
-  return (
-    <form style={{ display: 'grid', maxWidth: '200px', gap: '20px' }}>
-      <h3>Book Now</h3>
-      <label htmlFor="res-date">Choose date</label>
-      <input type="date" id="res-date" value={date} onChange={handleDateChange} />
-      <label htmlFor="res-time">Choose time</label>
-      <select id="res-time">
-        {availableTimes.map((time) => (
-          <option key={time}>{time}</option>
-        ))}
-      </select>
-      <label htmlFor="guests">Number of guests</label>
-      <input type="number" placeholder="1" min="1" max="10" id="guests" />
-      <label htmlFor="occasion">Occasion</label>
-      <select id="occasion">
-        <option>Birthday</option>
-        <option>Anniversary</option>
-      </select>
-      <input type="submit" value="Make Your reservation" />
-    </form>
   );
 };
 
