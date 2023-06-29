@@ -1,8 +1,9 @@
 
 import HeroSection from "./HeroSection";
-
-import Footer from "./Footer";
 import Highlights from "./Highlights";
+import TestimonialsSection from './CustomerTestimonials';
+import Footer from "./Footer";
+
 
 function Home(){
     return(
@@ -10,6 +11,7 @@ function Home(){
 
             <HeroSection />
             <Highlights />
+            <TestimonialsSection />
             <Footer />
         </>
     )

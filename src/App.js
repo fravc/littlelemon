@@ -17,7 +17,6 @@ function App() {
         <Route path="/reservations" element={<BookingForm />} />
 
       </Routes>
-
     </Router>
 
   );
