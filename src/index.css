@@ -166,6 +166,52 @@
   height: 60px;
 }
 
+/***********TestimonialSection********/
+.TestimonialContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #495E57;
+  height: 590px;
+  font-family: 'Karla';
+}
+.TestimonialContainer h2{
+  color:#F4CE14;
+  margin: 5%;
+}
+
+.TestimonialCardsContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.TestimonialCard{
+  display: flex;
+  flex-direction: column;
+  background-color:white;
+  padding: 0 2%;
+  margin:2%;
+  width: 200px;
+  height: 175px;
+}
+
+.TestimonialCard Img {
+  width: 47px;
+  height: 47px;
+}
+.TestimonialCard h4,
+.TestimonialCard span {
+  margin-top: 10px;
+}
+
+.TestimonialCardInfo{
+  display: flex;
+  align-items: center;
+}
+
+.TestimonialCardInfo h4{
+  padding-left: 15px;
+}
 /***********media query*********/
 
 @media (max-width: 700px) {
