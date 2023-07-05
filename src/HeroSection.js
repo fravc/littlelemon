@@ -1,5 +1,5 @@
 import React from 'react';
-import Image1 from 'C:/Users/julia.mota/Documents/Coursera/Modulo 8 - capstone/littlelemon-project/src/restauranfood.jpg';
+import Image1 from '../src/restauranfood.jpg';
 import { useMediaQuery } from 'react-responsive';
 
 function HeroSection() {

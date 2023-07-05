@@ -1,7 +1,7 @@
 import React from 'react';
-import GreekSaladImg from 'C:/Users/julia.mota/Documents/Coursera/Modulo 8 - capstone/littlelemon-project/src/greek_salad.jpg';
-import BruchettaImg from 'C:/Users/julia.mota/Documents/Coursera/Modulo 8 - capstone/littlelemon-project/src/bruchetta.jpg';
-import LemonDessert from 'C:/Users/julia.mota/Documents/Coursera/Modulo 8 - capstone/littlelemon-project/src/lemon_dessert.jpg';
+import GreekSaladImg from '../src/greek_salad.jpg';
+import BruchettaImg from '../src/bruchetta.jpg';
+import LemonDessert from '../src/lemon_dessert.jpg';
 import { useMediaQuery } from 'react-responsive';
 
 function Highlights() {
