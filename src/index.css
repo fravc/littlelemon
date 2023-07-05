@@ -214,6 +214,20 @@
 .TestimonialCardInfo h4 {
   padding-left: 15px;
 }
+
+/***********AboutSection********/
+.AboutContainer{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Karla';
+}
+
+.AboutContainer h2{
+  color: #F4CE14;
+}
+.AboutContainer h3{
+  color: #333333;
+}
 /***********media query*********/
 
 @media (max-width: 700px) {
@@ -234,9 +248,9 @@
 /**Responsive from NavBar**/
 .MobileMenu {
   display: flex;
-  flex-direction: column;
   align-items: center;
   font-size: 10px;
+  flex-wrap: wrap;
 }
 /**Responsive from Hero Section**/
 .HeroSectionMobile {
