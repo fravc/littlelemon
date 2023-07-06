@@ -173,6 +173,7 @@
   align-items: center;
   background-color: #495E57;
   font-family: 'Karla';
+  padding: 5% 0;
 }
 
 .TestimonialContainer h2 {
@@ -216,18 +217,26 @@
 }
 
 /***********AboutSection********/
-.AboutContainer{
+.AboutContainer {
   display: flex;
-  flex-direction: column;
-  font-family: 'Karla';
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 5%;
+  margin: 5% 15%;
 }
 
-.AboutContainer h2{
-  color: #F4CE14;
+.AboutContainer h2,
+.AboutContainer h3,
+.AboutContainer p {
+  flex: 1;
 }
-.AboutContainer h3{
-  color: #333333;
+
+.ImageAbout {
+  flex: 1;
 }
+
+
 /***********media query*********/
 
 @media (max-width: 700px) {
