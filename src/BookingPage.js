@@ -52,6 +52,18 @@ const Main = () => {
     if (form.bookingDate === '') {
     	hasErrors = true;
       errorObj.bookingDate="You must inform the booking date!";
+    }else {
+      var date = new Date(form.bookingDate);
+      var tzo = date.getTimezoneOffset();
+      date.setTime(date.getTime() + (tzo * 60 * 1000))
+
+      var actualDate = new Date();
+      actualDate.setHours(0,0,0,0)
+
+      if(date <= actualDate){
+        hasErrors = true;
+        errorObj.bookingDate="You must inform the booking date after today!";
+      }
     }
     if (form.bookingTime === ''){
       hasErrors = true;
