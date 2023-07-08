@@ -1,5 +1,6 @@
-import React, { useReducer } from 'react';
+import React, { useReducer,useState } from 'react';
 import BookingForm from './BookingForm';
+import { useNavigate } from "react-router-dom"
 
 export const bookingTimesReducer = (state, action) => {
   switch (action.type) {
@@ -15,6 +16,13 @@ export const bookingTimesReducer = (state, action) => {
 const Main = () => {
   const [availableTimes, dispatchAvailableTimes] = useReducer(bookingTimesReducer, []);
 
+  const [errorValidation, updateErrorValidation] = useState({
+    bookingDate:"",
+    bookingTime:""
+  });
+
+  const navigate = useNavigate()
+
   const updateTimes = (date) => {
     // Update availableTimes based on the selected date
     dispatchAvailableTimes({ type: 'UPDATE_TIMES', payload: date });
@@ -22,40 +30,40 @@ const Main = () => {
 
   const submitForm = (form) =>
   {
-    let errors = validateForm(form);
+    let hasErrors = validateForm(form);
 
-    if (errors.length > 0) {
-      console.log(errors)
-      alert("Errors");
+    if (hasErrors) {
       return
     }
 
     let success = window.submitAPI(form);
     if(success)
-      alert("Reseva confirmada !");
+      navigate(`/BookingConfirmationPage`)
     else
-      alert ("Erro ao finalizar rezerva");
+      alert ("Error to finish your reservation. Try again later.");
   }
 
   const validateForm = (form) =>
   {
-    let errors = [];
+    let hasErrors = false;
+    let errorObj = {...errorValidation}
+    errorObj.bookingDate="";
+    errorObj.bookingTime="";
     if (form.bookingDate === '') {
-    	errors.push("You must inform the booking date!");
+    	hasErrors = true;
+      errorObj.bookingDate="You must inform the booking date!";
     }
     if (form.bookingTime === ''){
-      errors.push("You must inform the booking time!");
+      hasErrors = true;
+      errorObj.bookingTime="You must inform the booking time!";
     }
-    if (form.numberGuests <= 0){
-      errors.push("You must inform at least 1 guest!");
-    }
-
-    return errors;
+    updateErrorValidation(errorObj)
+    return hasErrors;
   }
 
   return (
     <div>
-      <BookingForm availableTimes={availableTimes} updateTimes={updateTimes} onSubmitForm={submitForm} />
+      <BookingForm availableTimes={availableTimes} updateTimes={updateTimes} onSubmitForm={submitForm} errors={errorValidation}/>
     </div>
   );
 };
