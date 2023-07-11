@@ -18,7 +18,7 @@ function TestimonialsSection (){
                         <img alt="user Lucas" src={UserLucas} />
                         <h4>Lucas</h4>
                     </div>
-                    <spam>Delicious food and exceptional service</spam>
+                    <span>Delicious food and exceptional service</span>
                 </div>
                 <div className="TestimonialCard">
                     <h4>Rating</h4>
@@ -26,7 +26,7 @@ function TestimonialsSection (){
                         <img alt="user Maria" src={UserMaria}/>
                         <h4>Maria</h4>
                     </div>
-                    <spam>The best in the neighborhood</spam>
+                    <span>The best in the neighborhood</span>
                 </div>
                 <div className="TestimonialCard">
                     <h4>Rating</h4>
@@ -34,7 +34,7 @@ function TestimonialsSection (){
                         <img alt="user Jane" src={UserJane} />
                         <h4>Jane</h4>
                     </div>
-                    <spam>Great place to celebrate!</spam>
+                    <span>Great place to celebrate!</span>
                 </div>
                 <div className="TestimonialCard">
                     <h4>Rating</h4>
@@ -42,7 +42,7 @@ function TestimonialsSection (){
                         <img alt="user Andrew" src={UserAndrew} />
                         <h4>Andrew</h4>
                     </div>
-                    <spam>Good food and good service!</spam>
+                    <span>Good food and good service!</span>
                 </div>
             </div>
         </div>
