@@ -261,10 +261,22 @@
   display: flex;
   background-color: #D9D9D9;
   font-family: 'Karla';
+  justify-content: center;
+  padding: 5%;
 }
 
 .ImgRestaurant{
   width: 15%;
+}
+
+.FooterTitle{
+  color:#495E57;
+  font-weight: bolder;
+}
+
+.FooterLists{
+  list-style-type: none;
+  margin: 2%;
 }
 
 /***********media query*********/
@@ -334,5 +346,17 @@
   }
   .ImageAbout{
     width: 80%;
+  }
+}
+
+/**Responsive from Footer Section**/
+@media (max-width: 768px) {
+  .FooterContainer {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .ImgRestaurant{
+    width: 50%;
+    margin: 0 10%;
   }
 }
