@@ -255,6 +255,17 @@
   width: 40%;
 }
 
+/***********Footer Section*********/
+
+.FooterContainer{
+  display: flex;
+  background-color: #D9D9D9;
+  font-family: 'Karla';
+}
+
+.ImgRestaurant{
+  width: 15%;
+}
 
 /***********media query*********/
 
