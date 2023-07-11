@@ -5,6 +5,8 @@ import './App.css';
 import BookingForm from './BookingPage';
 import Home from './Home'
 import BookingConfirmationPage from './BookingConfirmationPage'
+import Footer from "./Footer";
+import AboutSection from "./About";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
         <Route path="/BookingConfirmationPage" element={<BookingConfirmationPage />} />
 
       </Routes>
+      <AboutSection />
+      <Footer />
     </Router>
 
   );
