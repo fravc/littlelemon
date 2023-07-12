@@ -280,6 +280,63 @@
   margin: 2%;
 }
 
+/***********Booking form section*********/
+.FormBanner{
+  background-color: #495E57;
+  display: flex;
+  justify-content: center;
+  font-family: 'Karla';
+  flex-direction: column;
+  align-items: center;
+  padding: 5%;
+}
+
+.FormBanner h2{
+  color: #F4CE14;
+  font-size: 3rem;
+}
+.FormBanner p{
+  color: #ffffff;
+}
+.FormContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Karla';
+  padding: 5%;
+  background-color: #EDEFEE;
+  margin: 5% 25%;
+  border-radius: 16px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.FormContainer span{
+  color: red;
+  padding: 10px;
+  margin: 5%;
+}
+
+.FormContainer input, select{
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  width: 200px;
+}
+
+.OtherFormField{
+  padding: 10px;
+  margin-bottom: 12%;
+}
+.FormButton{
+  background-color: #F4CE14;
+  border: none;
+  border-radius: 10px;
+  width: 200px;
+  height: 60px;
+  font-weight: bold;
+}
+
+
 /***********media query*********/
 
 @media (max-width: 700px) {
@@ -359,5 +416,12 @@
   .ImgRestaurant{
     width: 50%;
     margin: 0 10%;
+  }
+}
+
+/**Responsive from Booking Page**/
+@media (max-width: 768px) {
+  .FormContainer {
+    margin:1px;
   }
 }
