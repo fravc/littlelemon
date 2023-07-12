@@ -1,11 +1,16 @@
-
+:root {
+  --main-font:'Karla';
+  --green-background: #495E57;
+  --yellow-main-color: #F4CE14;
+  --secondary-font: 'Markazi Text';
+}
 
 /*****NAVIGATION BAR******/
 .NavBar{
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Karla';
+  font-family: var(--main-font);
 }
 .NavBar>ul{
   text-decoration: none;
@@ -33,12 +38,20 @@
   background-color: rgba(73, 94, 87, 0.5);
 }
 
+/**Responsive from NavBar**/
+.MobileMenu {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  flex-wrap: wrap;
+}
+
 /*******Hero Section********/
 .HeroSection{
-  background-color: #495E57;
+  background-color: var(--green-background);
   display: flex;
   justify-content: center;
-  font-family: 'Karla';
+  font-family: var(--main-font);
 }
 .HeroWrapper {
   margin: 2%;
@@ -53,9 +66,8 @@
 .HeroSection h1 {
   grid-column: 1 / span 2;
   grid-row: 1;
-  color: #F4CE14;
+  color: var(--yellow-main-color);
   font-size: 3rem;
-  
 }
 
 .HeroSection h3 {
@@ -85,12 +97,28 @@
 }
 
 .ReserveButton{
-  background-color: #F4CE14;
+  background-color: var(--yellow-main-color);
   border: none;
   border-radius: 10px;
   width: 200px;
   height: 60px;
   font-weight: bold;
+}
+/**Responsive from Hero Section**/
+.HeroSectionMobile {
+  text-align: center;
+}
+
+.HeroSectionMobile .HeroWrapper {
+  grid-template-columns: 1fr;
+  text-align: center;
+  margin-left: 0;
+}
+
+.HeroSectionMobile .Image_hero {
+  width: 80%;
+  height: auto;
+  margin: 20px auto;
 }
 
 /**********HIGHLIGHTS***********/
@@ -101,7 +129,7 @@
   align-items: center;
   justify-content: space-between;
   margin: 5% 15%;
-  font-family: 'Karla';
+  font-family: var(--main-font);
 }
 
 .ContainerHighlights h1 {
@@ -171,15 +199,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #495E57;
-  font-family: 'Karla';
+  background-color: var(--green-background);
+  font-family: var(--main-font);
   padding: 5% 0;
 }
 
 .TestimonialContainer h2 {
-  color: #F4CE14;
+  color: var(--yellow-main-color);
   margin: 5%;
-  font-family: 'Markazi Text';
+  font-family: var(--secondary-font);
   font-weight: 400;
   font-size: 2rem;
 }
@@ -218,6 +246,23 @@
 .TestimonialCardInfo h4 {
   padding-left: 15px;
 }
+/**Responsive from Testimonials Section**/
+@media (max-width: 768px) {
+  .TestimonialContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .TestimonialCard {
+    width: 100%;
+    margin: 2% 0;
+  }
+
+  .TestimonialCardsContainer{
+    flex-wrap: wrap;
+  }
+
+}
 
 /***********AboutSection********/
 .AboutContainer {
@@ -230,14 +275,14 @@
 }
 
 .AboutContainer h2{
-  font-family: 'Markazi Text';
-  color: #F4CE14;
+  font-family: var(--secondary-font);
+  color: var(--yellow-main-color);
   font-weight: 500;
   font-size: 2.3rem;
   margin: 5px 5px;
 }
 .AboutContainer h3{
-  font-family: 'Markazi Text' ;
+  font-family: var(--secondary-font) ;
   color: #333333;
   font-weight: 400;
   font-size: 1.5rem;
@@ -246,7 +291,7 @@
 }
 
 .AboutContainer p{
-  font-family: 'Karla' ;
+  font-family: var(--main-font) ;
   font-weight: bold;
   margin: 30px 5px;
 }
@@ -256,12 +301,24 @@
   width: 40%;
 }
 
+/**Responsive from About Section**/
+@media (max-width: 768px) {
+  .AboutContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .ImageAbout{
+    width: 80%;
+  }
+}
+
+
 /***********Footer Section*********/
 
 .FooterContainer{
   display: flex;
   background-color: #D9D9D9;
-  font-family: 'Karla';
+  font-family: var(--main-font);
   justify-content: center;
   padding: 5%;
 }
@@ -271,7 +328,7 @@
 }
 
 .FooterTitle{
-  color:#495E57;
+  color:var(--green-background);
   font-weight: bolder;
 }
 
@@ -280,19 +337,31 @@
   margin: 2%;
 }
 
+/**Responsive from Footer Section**/
+@media (max-width: 768px) {
+  .FooterContainer {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .ImgRestaurant{
+    width: 50%;
+    margin: 0 10%;
+  }
+}
+
 /***********Booking form section*********/
 .FormBanner{
-  background-color: #495E57;
+  background-color: var(--green-background);
   display: flex;
   justify-content: center;
-  font-family: 'Karla';
+  font-family: var(--main-font);
   flex-direction: column;
   align-items: center;
   padding: 5%;
 }
 
 .FormBanner h2{
-  color: #F4CE14;
+  color: var(--yellow-main-color);
   font-size: 3rem;
 }
 .FormBanner p{
@@ -302,7 +371,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Karla';
+  font-family: var(--main-font);
   padding: 5%;
   background-color: #EDEFEE;
   margin: 5% 25%;
@@ -328,12 +397,18 @@
   margin-bottom: 12%;
 }
 .FormButton{
-  background-color: #F4CE14;
+  background-color: var(--yellow-main-color);
   border: none;
   border-radius: 10px;
   width: 200px;
   height: 60px;
   font-weight: bold;
+}
+/**Responsive from Booking Page**/
+@media (max-width: 768px) {
+  .FormContainer {
+    margin:1px;
+  }
 }
 
 /***********Confirmation page Section*********/
@@ -358,76 +433,5 @@
     margin: 0 auto;
     grid-auto-flow: column;
     gap: 1em;
-  }
-}
-/**Responsive from NavBar**/
-.MobileMenu {
-  display: flex;
-  align-items: center;
-  font-size: 10px;
-  flex-wrap: wrap;
-}
-/**Responsive from Hero Section**/
-.HeroSectionMobile {
-  text-align: center;
-}
-
-.HeroSectionMobile .HeroWrapper {
-  grid-template-columns: 1fr;
-  text-align: center;
-  margin-left: 0;
-}
-
-.HeroSectionMobile .Image_hero {
-  width: 80%;
-  height: auto;
-  margin: 20px auto;
-}
-
-/**Responsive from Testimonials Section**/
-@media (max-width: 768px) {
-  .TestimonialContainer {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .TestimonialCard {
-    width: 100%;
-    margin: 2% 0;
-  }
-
-  .TestimonialCardsContainer{
-    flex-wrap: wrap;
-  }
-
-}
-
-/**Responsive from About Section**/
-@media (max-width: 768px) {
-  .AboutContainer {
-    flex-direction: column;
-    align-items: center;
-  }
-  .ImageAbout{
-    width: 80%;
-  }
-}
-
-/**Responsive from Footer Section**/
-@media (max-width: 768px) {
-  .FooterContainer {
-    flex-direction: column;
-    justify-content: center;
-  }
-  .ImgRestaurant{
-    width: 50%;
-    margin: 0 10%;
-  }
-}
-
-/**Responsive from Booking Page**/
-@media (max-width: 768px) {
-  .FormContainer {
-    margin:1px;
   }
 }
