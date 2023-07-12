@@ -21,7 +21,7 @@ function HeroSection() {
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
-        <button className="ReserveButton" onClick={handleReserveButtonClick}>Reserve a Table</button>
+        <button className="ReserveButton" onClick={handleReserveButtonClick} aria-label="On Click">Reserve a Table</button>
       </div>
     </div>
   );
