@@ -1,7 +1,7 @@
 import React from 'react';
-import GreekSaladImg from '../src/greek_salad.jpg';
-import BruchettaImg from '../src/bruchetta.jpg';
-import LemonDessert from '../src/lemon_dessert.jpg';
+import GreekSaladImg from '../src/assets/images/greek_salad.jpg';
+import BruchettaImg from '../src/assets/images/bruchetta.jpg';
+import LemonDessert from '../src/assets/images/lemon_dessert.jpg';
 import { useMediaQuery } from 'react-responsive';
 
 function Highlights() {

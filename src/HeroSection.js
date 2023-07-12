@@ -1,5 +1,5 @@
 import React from 'react';
-import Image1 from '../src/restauranfood.jpg';
+import Image1 from '../src/assets/images/restauranfood.jpg';
 import { useMediaQuery } from 'react-responsive';
 
 function HeroSection() {

@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo1 from 'C:/Users/julia.mota/Documents/Coursera/Modulo 8 - capstone/littlelemon-project/src/Logo1.png';
+import Logo1 from '../src/assets/images/Logo1.png';
 import { useMediaQuery } from 'react-responsive';
 import { Link } from 'react-router-dom';
 
