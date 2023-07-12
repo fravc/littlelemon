@@ -382,7 +382,8 @@
 .FormContainer span{
   color: red;
   padding: 10px;
-  margin: 5%;
+  margin: 0 5% 5%;
+  font-size: 0.8rem;
 }
 
 .FormContainer input, select{
