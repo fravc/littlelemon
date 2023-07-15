@@ -1,5 +1,9 @@
 # Project in Figma
+Wireframe:
 https://www.figma.com/file/eLLznwsWEDecFMrextnfu6/Wireframe-and-Component-exercise---module-8?type=design&node-id=0%3A1&mode=design&t=6CtPsP0BNeiuex4m-1
+
+Prototype:
+https://www.figma.com/file/eLLznwsWEDecFMrextnfu6/Wireframe-and-Component-exercise---module-8?type=design&node-id=18%3A15&mode=design&t=6CtPsP0BNeiuex4m-1
 
 # Getting Started with Create React App
 
