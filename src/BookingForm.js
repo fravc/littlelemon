@@ -33,7 +33,7 @@ const BookingForm = ({ availableTimes, updateTimes, onSubmitForm, errors }) => {
       <form onSubmit={handleSubmit} className="FormContainer">
         <label htmlFor="reserve-date">Choose date</label>
         <input type="date" name="bookingDate" id="reserve-date" value={formData.bookingDate} onChange={onFormDataChange} />
-        <span>{errors.bookingDate}</span>
+        <span data-testid="bookingDateError">{errors.bookingDate}</span>
         <label htmlFor="reserve-time">Choose time</label>
         <select name="bookingTime" id="reserve-time" onChange={onFormDataChange}  value={formData.bookingTime}>
         <option >Select...</option>
@@ -41,7 +41,7 @@ const BookingForm = ({ availableTimes, updateTimes, onSubmitForm, errors }) => {
             <option key={time}>{time}</option>
           ))}
         </select>
-        <span>{errors.bookingTime}</span>
+        <span data-testid="bookingTimeError">{errors.bookingTime}</span>
         <label htmlFor="numberguests">Number of guests</label>
         <input type="number" name="numberGuests" placeholder="1" min="1" max="10" id="numberguests" onChange={onFormDataChange}  value={formData.numberGuests} className='OtherFormField'/>
         <label htmlFor="occasion">Occasion</label>
